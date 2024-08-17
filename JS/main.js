@@ -12,7 +12,11 @@ deletbtn.addEventListener("click", () => {
   myinput.value = "";
 });
 equalbtn.addEventListener("click", () => {
-  myinput.value = eval(myinput.value);
+  if (myinput.value == "") {
+    myinput.value = "";
+  } else {
+    myinput.value = eval(myinput.value);
+  }
 });
 delet_last.addEventListener("click", () => {
   myinput.value = myinput.value.slice(0, -1);
